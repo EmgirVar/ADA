@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADA</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/js/jquery-3.6.1.min.js"></script>
+    <link href="https://css.gg/chevron-down-r.css" rel="stylesheet" />
+    <link href="https://css.gg/laptop.css" rel="stylesheet" />
+    <link href="https://css.gg/smartphone-shake.css" rel="stylesheet" />
+    <link href="https://css.gg/infinity.css" rel="stylesheet" />
+    <link href="https://css.gg/copy.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/Photo/favikon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/Photo/favikon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/Photo/favikon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      .navbar {
+        position: sticky;
+        top: 0;
+      }
+      .card-text {
+        position: relative;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-size: 4vw;
+        letter-spacing: 15px;
+        margin-top: 6px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .card-title {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-size: 3.5vw;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .home .heading {
+        padding-top: 0 10px;
+        position: absolute;
+        font-size: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        left: 0;
+        text-align: center;
+      }
+      .home-overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #3060cd20;
+      }
+      .home {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        background: url(Photo/MyPhoto/IMG_4868.jpg) 0 0 / cover no-repeat fixed;
+        color: rgb(92, 80, 80);
+        box-sizing: border-box;
+      }
+      .home .bottom {
+        position: absolute;
+        width: 100%;
+        bottom: 70px;
+        text-align: center;
+        transform: translateY(-50%);
+        top: 80%;
+      }
+      .home a {
+        border: 2px solid #3a2b2b5d;
+        border-radius: 50%;
+        border-color: white;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+      }
+      .gg-chevron-down-r {
+        margin: 13px 0 0 5px;
+        border: 2px;
+        position: center;
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        border-radius: 50%;
+        text-rendering: auto;
+        font-size: 50px;
+      }
+      .homepage-header {
+        padding: 0 0px;
+        background-color: dark;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        font-family: Oswald, sans-serif;
+      }
+      h2 {
+        font-size: 32px;
+        text-align: center;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      #once {
+        padding: 50px 0 100px;
+        margin: 0 auto;
+      }
+      .underline {
+        background: rgba(8, 8, 8, 0.514);
+        width: 200px;
+        height: 1px;
+        margin: 17px auto;
+      }
+      #once .container-skills {
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      #once .container-skills .testing {
+        margin: 20px;
+        background-color: rgba(0, 0, 0, 0.1);
+        max-width: 300px;
+        width: 80%;
+        min-width: 200px;
+        text-align: center;
+        padding: 15px;
+      }
+      #once .container-skills .testing .img {
+        font-size: 40px;
+      }
+      #once .container-skills .testing .skill-text {
+        line-height: 1.4em;
+      }
+      #once .container-skills .testing .img .gg {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      #about {
+        padding: 1% 100px;
+      }
+      #about .info {
+        flex-direction: row;
+        display: flex;
+        justify-items: center;
+      }
+      #about .text-area .about-me .about-me-item {
+        margin-bottom: 6px;
+      }
+      #about .photo {
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        display: flex;
+      }
+      #about .info .photo .rounded-img {
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        padding: 0.4em;
+        margin-bottom: 1em;
+        max-width: 360px;
+        margin: 20px auto;
+      }
+      #about .text-area {
+        padding: 0 30px;
+      }
+      .ul {
+        padding-left: 0;
+      }
+      #contacts .card-title {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      #contacts {
+        padding: 50px 0 100px;
+        margin: 0 auto;
+        
+      }
+      .card{
+        border-radius: 1em;
+        text-align: center;
+        padding: 1em;
+        border-color: rgba(0, 0, 0, 0.1);
+        position: absolute;
+      }
+      .card:hover{
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      .card-text-around{
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 20px;
+        max-width: 300px;
+        width: 80%;
+        min-width: 200px;
+        text-align: center;
+        padding: 15px;
+      }
+      #contacts .container-contacts {
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      #contacts .container-contacts .testing {
+        margin: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 1px;
+        max-width: 300px;
+        width: 80%;
+        min-width: 200px;
+        text-align: center;
+        padding: 15px;
+      }
+      #contacts .container-contacts .testing:hover{
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      #contacts .container-contacts .testing .img{
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Home-->
+    <section class="home">
+      <div class="home-overlay"></div>
+      <div class="heading">
+        <h5 class="card-title lead text-white">
+          Hello! My name is Artem and I
+        </h5>
+        <h1 class="card-text text-white">TESTING ENGINEER</h1>
+        <h5 class="card-title lead text-white">
+          ready to complete a task of any complexity
+        </h5>
+      </div>
+      <div class="bottom">
+        <a href="#header" class="anchor">
+          <i class="gg-chevron-down-r"></i>
+        </a>
+      </div>
+    </section>
+    <!--Navbar-->
+    <header id="header" class="homepage-header">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand p-0" href="Home.html">
+            <img src="Photo/favikon/ADA.png" alt="logo" width="50" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Home.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Achievements.html">Achievements</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link anchor" href="#contacts">Contacts</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--Чем я занимаюсь-->
+    <main>
+      <!--Карточки умений-->
+      <section id="once" class="col-12 col-sm-12 col-md-12 col-lg-10">
+        <h2 class="fw-light">What I can do</h2>
+        <div class="underline"></div>
+        <div class="container-skills">
+          <!--Веб тестирование-->
+          <div class="once-web-applications testing">
+            <div class="img">
+              <i class="gg gg-laptop" style="color: rgb(90, 90, 221)"></i>
+            </div>
+            <h3 class="fw-light">Web applications</h3>
+            <p class="skills-text fw-light">
+              Testing any type of web application. Using the DevTools, Charles
+              panel for tracking and spoofing requests.
+            </p>
+          </div>
+          <!--Мобильное тестирование-->
+          <div class="once-mobile-applications testing">
+            <div class="img">
+              <i
+                class="gg gg-smartphone-shake"
+                style="color: rgb(99, 212, 54)"
+              ></i>
+            </div>
+            <h3 class="fw-light">Mobile applications</h3>
+            <p class="skills-text fw-light">
+              Testing mobile applications both on live devices and in the
+              emulator. Preparing test environments.
+            </p>
+          </div>
+          <!--Тетисрование API-->
+          <div class="once-api testing">
+            <div class="img">
+              <i class="gg gg-infinity" style="color: rgb(177, 44, 44)"></i>
+            </div>
+            <h3 class="fw-light">API testing</h3>
+            <p class="skills-text fw-light">
+              Testing the API using Postman and Swagger tools using JSON
+              queries. Tracking results via MsSQL.
+            </p>
+          </div>
+          <!--Документация-->
+          <div class="once-api testing">
+            <div class="img">
+              <i class="gg gg-copy" style="color: rgb(41, 136, 160)"></i>
+            </div>
+            <h3 class="fw-light">Documentation</h3>
+            <p class="skills-text fw-light">
+              Competent preparation of test documentation: checklists, test
+              cases. Clear writing of bug reports and tracking of results.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--Личные умения-->
+      <section id="about">
+        <h2 class="fw-light">About me</h2>
+        <div class="underline"></div>
+        <div class="row align-items-center info">
+          <div class="photo col">
+            <img
+              class="rounded-img"
+              src="/Photo/cub/IMG_2640.jpg"
+              alt="My photo"
+            />
+          </div>
+          <div class="text-area col">
+            <h3 class="fw-light">Personal qualities</h3>
+            <ul class="about-me" style="list-style: circle; padding-left: 0">
+              <li class="about-me-item">
+                High level of self-education both at work and in everyday life
+              </li>
+              <li class="about-me-item">
+                Easy start in the team and good communication
+              </li>
+              <li class="about-me-item">
+                Meticulousness to details and attention to detail
+              </li>
+              <li class="about-me-item">
+                A great fantasy that allows you to offer new ideas
+              </li>
+              <li class="about-me-item">
+                I easily find bugs where they are not expected to be found
+              </li>
+              <li class="about-me-item">
+                I can express my thoughts briefly and clearly
+              </li>
+              <li class="about-me-item">
+                I work for the result of a satisfied user
+              </li>
+              <li class="about-me-item">
+                Attentiveness to all requirements and clarification of any
+                unclear points
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!--Контакты-->
+      <section id="contacts" class="col-12 col-sm-12 col-md-12 col-lg-10">
+        <h2 class="fw-light">How to contact me</h2>
+        <div class="underline"></div>
+        <div class="container-contacts">
+            <!--Resume-->
+            <div class="once-web-applications testing">
+              <div class="img">
+                <i class="bi bi-file-earmark-person-fill" style="color:#ced10dcb"></i>
+              </div>
+              <h3 class="fw-light">My resume</h3>
+              <p class="skills-text fw-light" >
+                You can open and download my resume and get a closer look at my skills.
+              </p>
+              <div class="btn btn-dark" style="position: center">
+                <a
+                  href="other/resume_AlbutovA.pdf"
+                  target="_blank"
+                  style="color: white; text-decoration: none;"
+                  >Open resume</a>
+              </div>
+            </div>
+            <!--Phone-->
+            <div class="once-web-applications testing">
+              <div class="img">
+                <i class="bi bi-telephone-x-fill" style="color:#136d59cb"></i>
+              </div>
+              <h3 class="fw-light">My phone</h3>
+              <p class="skills-text fw-light">
+                To call me, you have to click on the "Copy" button and paste my phone into any text editor
+              </p>
+              <div class="btn btn-dark" onclick="copyTextOnce()" style="position: center">
+                <a
+                  style="color: white; text-decoration: none;"
+                  >Copy phone</a>
+              </div>
+              <script>
+                function copyTextOnce() {
+                    navigator.clipboard.writeText
+                        ("89644941426");
+                }
+              </script>
+            </div>
+            <!--Mail-->
+            <div class="once-web-applications testing">
+              <div class="img">
+                <i class="bi bi-mailbox2" style="color:#b31717cb"></i>
+              </div>
+              <h3 class="fw-light">My e-mail</h3>
+              <p class="skills-text fw-light">
+                You can also write to me by email and I will try to answer you as soon as possible.
+              </p>
+              <div class="btn btn-dark" onclick="copyTextSecond()" style="position: center">
+                <a
+                  style="color: white; text-decoration: none;"
+                  >Copy e-mail</a>
+              </div>
+              <script>
+                function copyTextSecond() {
+                    navigator.clipboard.writeText
+                        ("mrfill37@gmail.com");
+                }
+              </script>
+            </div>
+            <!--Pikabu-->
+            <div class="once-web-applications testing">
+              <div class="img">
+                <i class="bi bi-quote" style="color:#25a106fa"></i>
+              </div>
+              <h3 class="fw-light">My blog</h3>
+              <p class="skills-text fw-light">
+                I do testing in my free time and run my own blog. Join my adventures.
+              </p>
+              <div class="btn btn-dark" style="position: center">
+                <a
+                  href="https://pikabu.ru/@MrFill"
+                  target="_blank"
+                  style="color: white; text-decoration: none;"
+                  >Open blog</a>
+              </div>
+            </div>
+            <!--Telegram-->
+            <div class="once-web-applications testing">
+              <div class="img">
+                <i class="bi bi-telegram" style="color:#101294cb"></i>
+              </div>
+              <h3 class="fw-light">My telegram</h3>
+              I am in the telegram. Write to me there, I am always glad to communicate.
+              </p>
+              <div class="btn btn-dark" onclick="copyTextThird()" style="position: center">
+                <a
+                  style="color: white; text-decoration: none;"
+                  >Copy telegram</a>
+              </div>
+              <script>
+                function copyTextThird() {
+                    navigator.clipboard.writeText
+                        ("@Calimag");
+                }
+            </script>
+            </div>
+            <!--Skype-->
+            <div class="once-web-applications testing">
+              <div class="img">
+                <i class="bi bi-skype" style="color:#0077ffcb"></i>
+              </div>
+              <h3 class="fw-light">My skype</h3>              
+              You can get together on Skype and talk about testing. Call or email me.
+              </p>
+              <div class="btn btn-dark" onclick="copyTextFourth()" style="position: center">
+                <a
+                  style="color: white; text-decoration: none;"
+                  >Copy skype</a>
+              </div>
+              <script>
+                function copyTextFourth() {
+                    navigator.clipboard.writeText
+                        ("artemiy08051994");
+                }
+            </script>
+            </div>
+            <!--500px-->
+            <div class="once-web-applications testing">
+              <div class="img">
+                <i class="bi bi-camera" style="color:#000000cb"></i>
+              </div>
+              <h3 class="fw-light">My photoalbum</h3>
+              <p class="skills-text fw-light">
+                You can look at my work on this resource. So I relax and get inspired for new achievements.
+              </p>
+              <div class="btn btn-dark" style="position: center">
+                <a
+                  href="https://500px.com/p/mrfill37?view=photos"
+                  target="_blank"
+                  style="color: white; text-decoration: none;"
+                  >Open album</a>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </section>
+    </main>
+  </body>
+</html>
+
+
+
+

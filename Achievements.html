@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Achievements</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Photo/favikon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Photo/favikon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Photo/favikon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      .card {
+        border-radius: 1em;
+        text-align: center;
+        padding: 1em;
+        border-color: rgba(0, 0, 0, 0.1);
+      }
+      .card:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      .card img {
+        border-radius: 50%;
+        width: 60%;
+        margin: auto;
+      }
+      .circle {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand p-0" href="Home.html">
+          <img src="Photo/favikon/ADA.png" alt="logo" width="50" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="Achievements.html"
+                >Achievements</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link anchor" href="Home.html#contacts">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container my-3">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+        <div class="col">
+          <div class="card">
+            <img src="/Photo/cub/IMG_2640.jpg" class="card-img" alt="Photo" />
+            <div class="card-body">
+              <h5 class="card-title">Brief autobiography</h5>
+              <p class="card-text">My Life's Journey in a short story</p>
+              <a href="About me.html" target="_blank" class="btn btn-dark"
+                >Read the article</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="Photo/cub/IMG_3325.jpg"
+              class="card-img-top"
+              alt="Photo"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Photo hunting</h5>
+              <p class="card-text">A hobby that inspires creativity</p>
+              <a href="Photo hunting.html" target="_blank" class="btn btn-dark"
+                >Read the article</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="/Photo/cub/Pizza_Flour_Piece_534023_2560x1706.jpg"
+              class="card-img-top"
+              alt="Photo"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Life in the kitchen</h5>
+              <p class="card-text">Create, love, cook</p>
+              <a
+                href="Live in the kitchen.html"
+                target="_blank"
+                class="btn btn-dark"
+                >Read the article</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="/Photo/Work/m1000x1000.jpg"
+              class="card-img-top"
+              alt="Photo"
+            />
+            <div class="card-body">
+              <h5 class="card-title">New article</h5>
+              <p class="card-text">A new article will appear here soon</p>
+              <a href="New article.html" target="_blank" class="btn btn-dark"
+                >Read the article</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
