@@ -41,6 +41,9 @@
     />
     <link rel="manifest" href="/site.webmanifest" />
     <style>
+      :root{
+        --index: calc(1vw + 1vh)
+      }
       h1,
       h2,
       h3,
@@ -84,6 +87,10 @@
         width: 100%;
         left: 0;
         text-align: center;
+        box-sizing: border-box;
+        will-change: transform;
+        font-size: calc(var(--index) / 1.175);
+        align-items: center;
       }
       .home-overlay {
         width: 100%;
@@ -100,6 +107,7 @@
         background: url(Photo/MyPhoto/IMG_4868.jpg) 0 0 / cover no-repeat fixed;
         color: rgb(92, 80, 80);
         box-sizing: border-box;
+        display: flex;
       }
       .home .bottom {
         position: absolute;
@@ -189,11 +197,13 @@
       }
       #about {
         padding: 1%;
+        box-sizing: border-box;
       }
       #about .info {
         flex-direction: row;
         display: flex;
         justify-items: center;
+        
       }
       #about .text-area .about-me .about-me-item {
         margin-bottom: 6px;
@@ -226,7 +236,7 @@
       #contacts {
         padding: 50px 0 100px;
         margin: 0 auto;
-        
+        box-sizing: content-box;
       }
       .card{
         border-radius: 1em;
